@@ -3,11 +3,34 @@
 A complete Java Swing application for bus reservation management with admin and passenger interfaces.
 
 ## Features
-- User authentication (login/register) with different roles (admin/passenger)
-- Admin panel for managing buses (add new buses, view all buses)
-- Passenger panel for viewing available buses and booking tickets
-- Database integration with MySQL
-- Clean, responsive UI with Swing components
+- **User Authentication**: Login/Register system with role-based access (Admin/Passenger)
+- **Admin Panel**: 
+  - Add new buses with complete details
+  - View all available buses
+  - Manage bus inventory
+- **Passenger Panel**:
+  - Browse available buses
+  - Book tickets with seat selection
+  - Payment processing simulation
+- **Database Integration**: 
+  - MySQL database with JDBC
+  - Secure user authentication
+  - Transaction management for bookings
+
+## Core Components
+- `MainFrame`: Main application window with card layout
+- `LoginPanel`: Handles user authentication
+- `AdminPanel`: Bus management interface
+- `PassengerPanel`: Ticket booking interface
+- `BookingSystem`: Core system controller
+- `BusDAO`: Data access for bus operations
+- `UserDAO`: Handles user authentication and registration
+- `PaymentService`: Simulates payment processing
+
+## Database Schema
+- **users**: Stores user credentials and roles
+- **buses**: Contains bus schedule and availability
+- **bookings**: Records all ticket reservations
 
 ## Technologies
 - Java 
@@ -15,11 +38,8 @@ A complete Java Swing application for bus reservation management with admin and 
 - MySQL for database
 - JDBC for database connectivity
 
-## Database Setup
-1. Create a MySQL database named `bus_reservation`
-2. Run the SQL scripts to create necessary tables (buses, users, bookings)
-
 ## How to Run
-1. Clone this repository
-2. Configure database connection in `DatabaseConnection.java`
-3. Run `BusReservationAppGUI.java`
+1. Create MySQL database `bus_reservation`
+2. Execute SQL scripts to create tables
+3. Configure `DatabaseConnection.java` with your credentials
+4. Run `BusReservationAppGUI.java`
